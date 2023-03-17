@@ -1,0 +1,71 @@
+[Version]
+Signature="$Windows NT$"
+Provider=%ES%
+LayoutFile=layout.inf
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+
+[DestinationDirs]
+DefaultDestDir=66000
+
+
+[ControlFlags]
+ExcludeFromSelect = 2369
+
+
+[Strings]
+ES="Teklynx International Braton Groupe sarl"
+
+[WinntDirectories]
+1  = "\"
+2  = system32
+3  = system32\config
+4  = system32\drivers
+5  = system
+6  = system32\os2
+7  = system32\ras
+8  = system32\os2\dll
+9  = system32\spool
+10 = system32\spool\drivers
+11 = system32\spool\drivers\w32x86\2
+12 = system32\spool\prtprocs
+13 = system32\spool\prtprocs\w32x86
+14 = system32\wins
+15 = system32\dhcp
+16 = repair
+17 = system32\drivers\etc
+18 = system32\spool\drivers\w32x86
+19 = system32\viewers
+20 = inf
+21 = Help
+22 = Fonts
+23 = Config    2
+24 = Profiles
+25 = Cursors
+26 = Media
+[SourceDisksNames]
+1 = "Disk 1" , ,
+
+[SourceDisksNames.x86]
+1 = "Disk 1" , ,
+
+[SourceDisksFiles]
+THT_70.dll = 1
+THT_70UI.dll = 1
+THT_70.dat = 1
+
+[Manufacturer]
+"Teklynx"
+
+[Teklynx]
+"Printer THT 7.0"		= THT_70.dat
+
+
+[THT_70.dat]
+CopyFiles=@THT_70.dll, @THT_70UI.dll, @THT_70.dat
+DataSection=data_THT_70
+
+[data_THT_70]
+DriverFile=THT_70.dll
+ConfigFile=THT_70UI.dll
+DataFile=THT_70.dat

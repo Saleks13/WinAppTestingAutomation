@@ -1,0 +1,2 @@
+del /f "C:\workspace\WinAppTestingAutomation\TestDriverScript\DriverTestScript.ini"
+copy "C:\workspace\WinAppTestingAutomation\TestDriverScript\start.ini" "C:\workspace\WinAppTestingAutomation\TestDriverScript\DriverTestScript.ini"
