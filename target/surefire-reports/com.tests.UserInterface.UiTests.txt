@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.tests.UserInterface.UiTests
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 64.778 s - in com.tests.UserInterface.UiTests
