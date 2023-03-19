@@ -34,7 +34,7 @@
 ^XZ
 ^XA
 ^LRN
-^S(CUB,S,N
+^S(CUB,S,L
 ^S(CMP,M,T
 ^PQ1,0,1,Y
 ^XZ

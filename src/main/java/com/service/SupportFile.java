@@ -7,17 +7,20 @@ import java.io.IOException;
 
 public class SupportFile {
 
+    //this method is used before starting execution of the test, so that we know the initial state of the app nad its settings
     public static void createIniFile() {
         try {
+            //make sure to specify your *.ini file location string
             Runtime.getRuntime().exec("cmd.exe /c copy \"C:\\workspace\\WinAppTestingAutomation\\TestDriverScript\\start.ini\" \"C:\\workspace\\WinAppTestingAutomation\\TestDriverScript\\DriverTestScript.ini\"");
             System.out.println("Ini file created.");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    //method to remove ini file - used after each test
     public static void removeIniFile() {
         try {
+            //make sure to specify your *.ini file location string
             Runtime.getRuntime().exec("cmd.exe /c del /f \"C:\\workspace\\WinAppTestingAutomation\\TestDriverScript\\DriverTestScript.ini\"");
             System.out.println("Ini file removed");
         } catch (IOException e) {
@@ -25,6 +28,7 @@ public class SupportFile {
         }
     }
 
+    //method to kill notepad windows after tests
     public static void killAllNotePads(){
         try {
             Runtime.getRuntime().exec("cmd.exe /c taskkill /IM notepad.exe /F");

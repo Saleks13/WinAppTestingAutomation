@@ -42,10 +42,10 @@ public class BaseWinAppDriver {
            last test is complete
            */
             driver.close();
-            WinDriver.stop();
-            Thread.sleep(5000);
+            Thread.sleep(1000);
 
         }
+        WinDriver.stop();
         //remove ini file after executing test
         SupportFile.removeIniFile();
         SupportFile.killAllNotePads();

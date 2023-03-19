@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public class WinDriver
 {
+    //make sure the location is correct
     public static void start()
     {
         try
