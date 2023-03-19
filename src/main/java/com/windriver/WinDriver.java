@@ -40,8 +40,10 @@ public class WinDriver
     {
         try
         {
-            ProcessBuilder processBuilder =new ProcessBuilder("taskkill ","/f","/IM","WinAppDriver.exe");
-            processBuilder.start();
+            Runtime.getRuntime().exec("cmd.exe /c taskkill /IM WinAppDriver.exe /F");
+            System.out.println("Closing app");
+            //ProcessBuilder processBuilder = new ProcessBuilder("taskkill ","/f","/IM","WinAppDriver.exe");
+            //processBuilder.start();
         }
         catch (IOException e)
         {

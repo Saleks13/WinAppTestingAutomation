@@ -31,6 +31,7 @@ public class BaseWinAppDriver {
 
         //start WinAppDriver.exe so that is start listening to incoming requests
         WinDriver.start();
+        Thread.sleep(5000);
         driver = new WindowsDriver(new URL("http://127.0.0.1:4723/"), capability);
     }
 
@@ -42,11 +43,12 @@ public class BaseWinAppDriver {
            last test is complete
            */
             driver.close();
-            Thread.sleep(1000);
-            //test
+            Thread.sleep(2000);
+            WinDriver.stop();
+            Thread.sleep(2000);
+            SupportFile.killAllNotePads();
 
         }
-        WinDriver.stop();
         //remove ini file after executing test
         SupportFile.removeIniFile();
         SupportFile.killAllNotePads();

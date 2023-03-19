@@ -27,6 +27,7 @@ public class Printers extends BaseWinPage {
         if (driver.findElementByName(printerModel).isSelected()) {
             System.out.println("Printer " + printerModel + " selected");
         } else {
+            driver.findElementByName(printerModel).click();
             driver.findElementByName(printerModel).sendKeys(Keys.SPACE);
         }
 

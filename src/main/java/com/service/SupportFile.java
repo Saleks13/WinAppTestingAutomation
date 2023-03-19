@@ -1,7 +1,6 @@
 package com.service;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -33,37 +32,15 @@ public class SupportFile {
         try {
             Runtime.getRuntime().exec("cmd.exe /c taskkill /IM notepad.exe /F");
             System.out.println("Notepads closed");
+
+            //ProcessBuilder processBuilder = new ProcessBuilder("taskkill ","/f","/IM","notepad.exe");
+            //processBuilder.start();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-
-    public static String getExePath(String sourcePath) {
-        String newExeFileFullPath = sourcePath + ".exe";
-        try {
-            String command = "cmd.exe /c copy " + sourcePath + " " + newExeFileFullPath;
-            System.out.println("command: " + command);
-            Runtime.getRuntime().exec(command);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return newExeFileFullPath;
-    }
-
-    public static void installDriver(String path) throws IOException, InterruptedException {
-        System.out.println("Path: " + path);
-        String fullPath = System.getProperty("user.dir") + "\\" + path;
-        System.out.println("Full path: " + fullPath);
-        String argument = "/c start /wait " + fullPath;
-        ProcessBuilder builder = new ProcessBuilder("cmd", argument);
-        builder.inheritIO();
-        Process p = builder.start();
-        int exitCode = p.waitFor();
-        System.out.println("Installation completed with exit code " + exitCode);
-    }
-
-
 
     public static Boolean checkTxtFileContains(String filePath, String stringToHave) {
 
