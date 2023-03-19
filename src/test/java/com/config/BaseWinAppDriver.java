@@ -43,6 +43,7 @@ public class BaseWinAppDriver {
            */
             driver.close();
             Thread.sleep(1000);
+            //test
 
         }
         WinDriver.stop();
